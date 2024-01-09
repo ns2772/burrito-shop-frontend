@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'http://localhost:5000/api';
 
 const getBurritos = async () => {
     const response = await axios.get(`${API_URL}/burrito`);
@@ -22,9 +22,12 @@ const getOrderById = async (id) => {
     return response.data;
 };
 
-export default {
+// Assign the object to a variable before exporting
+const apiService = {
     getBurritos,
     getOrders,
     createOrder,
-    getOrderById
+    getOrderById,
 };
+
+export default apiService;

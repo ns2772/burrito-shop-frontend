@@ -5,7 +5,10 @@ function BurritoList() {
     const [burritos, setBurritos] = useState([]);
 
     useEffect(() => {
-        apiService.getBurritos().then(setBurritos);
+        apiService.getBurritos().then(data => {
+            setBurritos(data);
+            console.log(data); // Check what data is received
+        });
     }, []);
 
     return (
