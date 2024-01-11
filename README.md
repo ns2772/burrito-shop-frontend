@@ -32,7 +32,7 @@ This will start the React application and open it in your default web browser. T
 
 ### Testing
 
-(TODO: Instructions for running any tests you've written for your frontend.)
+`npm test` 
 
 ## Built With
 
