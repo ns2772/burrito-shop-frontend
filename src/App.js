@@ -5,7 +5,7 @@ import OrderForm from './components/OrderForm';
 import OrderList from './components/OrderList';
 import OrderDetails from './components/OrderDetails';
 
-function App() {
+function App({ router }) {
     return (
         <BrowserRouter>
             <nav>

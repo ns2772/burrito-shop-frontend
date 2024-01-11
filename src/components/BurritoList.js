@@ -15,8 +15,11 @@ function BurritoList() {
         <div>
             <h2>Burritos</h2>
             <ul>
-                {burritos.map(burrito => (
-                    <li key={burrito.name}>{`${burrito.name} - ${burrito.size} - $${burrito.price}`}</li>
+                {burritos.map((burrito, index) => (
+                    <div key={index}>
+                        <li key={burrito.name}>{`${burrito.name} - ${burrito.size} - $${burrito.price}`}</li>
+                    </div>
+                    
                 ))}
             </ul>
         </div>

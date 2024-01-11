@@ -43,20 +43,16 @@ function OrderForm() {
         <form onSubmit={handleSubmit}>
             <h2>Create Order</h2>
             <div>
-                <label>
-                    Burrito:
-                    <select value={selectedBurrito} onChange={e => setSelectedBurrito(e.target.value)}>
-                        {burritos.map(burrito => (
-                            <option key={burrito.name} value={burrito.name}>{burrito.name}</option>
-                        ))}
-                    </select>
-                </label>
+                <label htmlFor="burrito" id="burritoLabel">Burrito:</label>
+                <select id="burrito" value={selectedBurrito} onChange={e => setSelectedBurrito(e.target.value)}>
+                    {burritos.map((burrito, index) => (
+                       <option key={index} value={burrito.name}>{burrito.name}</option>   
+                    ))}
+                </select>
             </div>
             <div>
-                <label>
-                    Quantity:
-                    <input type="number" value={quantity} min="1" onChange={e => setQuantity(parseInt(e.target.value))} />
-                </label>
+                <label htmlFor="quantity">Quantity:</label>
+                <input type="number" id="quantity" value={quantity} min="1" onChange={e => setQuantity(parseInt(e.target.value))} />
             </div>
             <button type="button" onClick={addOrderItem}>Add to Order</button>
             <ul>
